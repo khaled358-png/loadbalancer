@@ -1,28 +1,31 @@
-# loadbalancer
-# Load Balancer Project
+Load Balancer Project
 
-This project contains **two simple APIs** and a **Nginx container** for load balancing and caching.
-All three containers run together using **Docker Compose**.
+This project demonstrates a simple load balancing and caching setup using Nginx with two backend APIs.
+All services run together using Docker Compose.
 
----
+📌 Project Description
 
-## Project Description
+api1: returns Hello from API 1
 
-- **api1**: returns `"Hello from API 1"`
-- **api2**: returns `"Hello from API 2"`
-- **nginx**: load balances requests between api1 and api2, with caching enabled
+api2: returns Hello from API 2
 
-All services are defined in a **single Docker Compose file**.
+nginx:
 
----
+Load balances requests between api1 and api2
 
-## How to Run
+Has caching enabled to improve performance and reduce backend load
 
-1. Go to the project folder:
+🚀 How to Run
 
-```bash
+Go to the project folder:
+
 cd loadbalancer
-docker compose up -d
-and test with open URL
-http://localhost:8080
 
+
+Start the containers:
+
+docker compose up -d
+
+
+Test the application in your browser:
+👉 http://localhost:8080
